@@ -1,0 +1,24 @@
+<div class="search-results-container">
+    <h2 class="title">Resultados</h2>
+    <hr>
+    <div class="alert alert-primary" *ngIf="heroesFound.length == 0">
+        No se encontraron resultados a tu busqueda de <strong>{{textToSearch}}</strong>
+    </div>
+    <div class="results-container animated fadeIn fast" *ngIf="heroesFound.length > 0">
+        <div class="row row-cols-1 row-cols-md-3">
+            <div class="col mb-4 animated fadeIn fast" *ngFor="let heroe of heroesFound">
+                <div class="card">
+                    <div class="body-card">
+                        <img src="{{heroe.img}}" class="img">
+                        <div>
+                            <h5 class="card-title">{{heroe.nombre}}</h5>
+                            <p class="card-text">{{heroe.casa}}</p>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-outline-primary" (click)="goToHeroeDetail(heroe.nombre)"> Ver
+                        más</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

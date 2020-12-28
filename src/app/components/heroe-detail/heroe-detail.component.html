@@ -1,0 +1,20 @@
+<div class="heroe-detail-container">
+    <h2 class="title">Detalle del Heroe</h2>
+    <hr>
+    <div class="card">
+        <div class="image-container">
+            <img src="{{heroeData[0].img}}" class="  img">
+        </div>
+        <div>
+            <div class="card-body">
+                <!-- uso de pipe uppercase -->
+                <h5 class="card-title"><strong>{{heroeData[0].nombre | uppercase}}</strong></h5>
+                <p class="card-text">{{heroeData[0].bio}}</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Aparicion: <strong>{{heroeData[0].aparicion | date:'y'}}</strong></li>
+                <li class="list-group-item"><img src="{{logoPath}}" class="logo"></li>
+                <li class="list-group-item"><a class="card-link" (click)="goToHeroesList()">Volver a la lista de heroes</a></li>
+            </ul>
+        </div>
+    </div>

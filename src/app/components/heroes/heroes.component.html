@@ -1,0 +1,15 @@
+<div class="animated fadeIn fast heroes-container">
+    <h1 class="title">Heroes List</h1>
+    <div class="row row-cols-1 row-cols-md-3">
+        <div class="col mb-4 animated fadeIn fast" *ngFor="let heroe of heroesList">
+            <div class="card">
+              <img src={{heroe.img}} class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">{{heroe.nombre}}</h5>
+                <p class="card-text">{{heroe.bio}}</p>
+              </div>
+              <button type="button" class="btn btn-outline-primary" (click) = "goToHeroeDetail(heroe.nombre)"> Ver más</button>
+            </div>
+          </div>
+    </div>
+</div>
