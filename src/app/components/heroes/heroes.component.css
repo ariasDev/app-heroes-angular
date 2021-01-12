@@ -4,3 +4,7 @@
     text-align: center;
     font-family: 'Hanalei Fill', cursive;
 }
+
+.heroes-container {
+    padding: 20px;
+}

@@ -18,9 +18,4 @@ export class HeroesComponent implements OnInit {
   ngOnInit(): void {
     this.heroesList = this.heroesService.getHeroesList();
   }
-
-  goToHeroeDetail(name: string): void {
-    this.router.navigate(['/heroe-detail', name]);
-  }
-
 }
